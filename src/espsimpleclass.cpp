@@ -161,7 +161,7 @@ void ESPSimpleClass::write_string(WiFiClient client, const char *str)
     client.write(str, len);
 }
 
-bool ESPSimpleClass::send_state(char *uid, char *state)
+bool ESPSimpleClass::send_state(const char *uid, const char *state)
 {
     if(!me_is_adopted || !ha_found)
         return false;
@@ -187,7 +187,7 @@ bool ESPSimpleClass::send_state(char *uid, char *state)
     return success;
 }
 
-bool ESPSimpleClass::register_sensor(char *uid, char *name, char *unit, char *state_class, char *device_class)
+bool ESPSimpleClass::register_sensor(const char *uid, const char *name, const char *unit, const char *state_class, const char *device_class)
 {
     if(!me_is_adopted || !ha_found)
         return false;
@@ -216,3 +216,5 @@ bool ESPSimpleClass::register_sensor(char *uid, char *name, char *unit, char *st
 
     return success;
 }
+
+ESPSimpleClass ESPSimple;

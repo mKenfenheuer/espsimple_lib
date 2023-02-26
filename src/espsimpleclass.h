@@ -16,8 +16,8 @@ class ESPSimpleClass {
         ESPSimpleClass();
         bool begin(String device_id, String friendly_name, String model, String sw_version = __VERSION__);
         bool begin(String friendly_name, String model, String sw_version = __VERSION__);
-        bool send_state(char *uid, char *state);
-        bool register_sensor(char *uid, char *name, char *unit, char *state_class, char *device_class);  
+        bool send_state(const char *uid, const char *state);
+        bool register_sensor(const char *uid, const char *name, const char *unit, const char *state_class, const char *device_class);  
         bool reset_adoption();
         bool is_adopted()
         {
