@@ -21,6 +21,7 @@
       "WiFi":"*",
       "ESPmDNS":"*",
       "ArduinoOTA":"*",
+      "Update":"*",
       "ottowinter/ESPAsyncWebServer-esphome":"3.0.0"
     },
     "frameworks": "arduino",
